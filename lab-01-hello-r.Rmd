@@ -96,7 +96,7 @@ ggplot(data = star_data, mapping = aes(x = x, y = y)) +
 
 
 ```{r cor-star}
-dino_data %>%
+star_data %>%
   summarize(r = cor(x, y))
 ```
 ``` {r}
@@ -105,23 +105,39 @@ star_data %>%
 #> # A tibble: 1 × 1
 #>         r
 #>     <dbl>
-#> 1 -0.0645
+#> 1 -0.0630
 ```
 
 
-There is not a difference between the star and dino correlation coefficients.
+There correlation coefficient for star is -0.630 and the dino correlation coefficients is -0.645.
 
 ### Exercise 4
 
 Add your code and narrative to complete this exercise. Use the conventions from the previous exercises to name your chunks and organize your work.
 
-```{r}
+```{r plot-circle}
+circle_data<- datasaurus_dozen %>%
+  filter(dataset == "circle")
+
+ggplot(data = circle_data, mapping = aes(x = x, y = y)) +
+  geom_point()
 
 ```
 
-```{r}
-
+```{r cor-circle}
+circle_data %>%
+  summarize(r = cor(x, y))
 ```
+``` {r}
+circle_data %>%
+  summarize(r = cor(x, y))
+#> # A tibble: 1 × 1
+#>         r
+#>     <dbl>
+#> 1 -0.0683
+```
+There correlation coefficient for circle is -0.683 and the dino correlation coefficients is -0.645.
+
 
 ### Exercise 5
 
