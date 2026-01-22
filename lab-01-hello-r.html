@@ -425,8 +425,16 @@ ggplot(data = dino_data, mapping = aes(x = x, y = y)) +
 ##         r
 ##     &lt;dbl&gt;
 ## 1 -0.0645</code></pre>
-<p>Once you’ve cleaned up the text, add your own explanation or
-observations here!</p>
+<pre class="r"><code>dino_data %&gt;%
+  summarize(r = cor(x, y))</code></pre>
+<pre><code>## # A tibble: 1 × 1
+##         r
+##     &lt;dbl&gt;
+## 1 -0.0645</code></pre>
+<pre class="r"><code>#&gt; # A tibble: 1 × 1
+#&gt;         r
+#&gt;     &lt;dbl&gt;
+#&gt; 1 -0.0645</code></pre>
 </div>
 <div id="exercise-3" class="section level3">
 <h3>Exercise 3</h3>
